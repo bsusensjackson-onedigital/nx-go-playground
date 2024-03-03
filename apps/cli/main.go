@@ -11,4 +11,5 @@ func main() {
 	logger.Info(fmt.Sprintf("area: %.2f", triangle.Area()))
 	logger.Info(fmt.Sprintf("perimeter: %.2f", triangle.Perimeter()))
 	logger.Warn(fmt.Sprintf("is right angled: %t", triangle.IsRightAngled()))
+	logger.Info("Done")
 }
