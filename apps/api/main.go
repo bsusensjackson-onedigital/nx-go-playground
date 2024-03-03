@@ -19,6 +19,7 @@ func main() {
 	http.HandleFunc("/clamp", clamp)
 	http.HandleFunc("/hello", hello)
 	logger.Info("Listening on port 8090")
+	logger.Info("Try http://localhost:8090/clamp")
 	err := http.ListenAndServe(":8090", nil)
 	if err != nil {
 		logger.Error(fmt.Sprintf("HTTP server error: %v", err))
