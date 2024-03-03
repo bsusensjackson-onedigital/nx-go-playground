@@ -41,6 +41,7 @@ func (t Triangle) Perimeter() float64 {
 }
 
 func (t Triangle) IsRightAngled() bool {
+	println("IsRightAngled")
 	a := Distance(t.A, t.B)
 	b := Distance(t.B, t.C)
 	c := Distance(t.C, t.A)
