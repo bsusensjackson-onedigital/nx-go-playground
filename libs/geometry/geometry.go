@@ -34,6 +34,7 @@ func (t Triangle) Area() float64 {
 }
 
 func (t Triangle) Perimeter() float64 {
+	println("Perimeter")
 	a := Distance(t.A, t.B)
 	b := Distance(t.B, t.C)
 	c := Distance(t.C, t.A)
