@@ -22,6 +22,25 @@
     },
     "lint": {
       "executor": "@nx-go/nx-go:lint"
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "baseBranch": "HEAD:main",
+        "preset": "conventional",
+        "tagPrefix": "api/v",
+        "push": false,
+        "trackDeps": true,
+        "commitMessageFormat": "chore({projectName}): release version {version} [skip ci]"
+      }
+    },
+    "test-release": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "yarn semantic-release-plus --extends ./apps/api/release.config.js --no-ci",
+        "cwd": "apps/api"
+      }
     }
   }
 }
